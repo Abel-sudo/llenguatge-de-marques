@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pràctica 02 - Formulari i estructura HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        aside {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegació -->
+    <nav>
+        <a href="#inici">Inici</a>
+        <a href="#serveis">Serveis</a>
+        <a href="#sobre-nosaltres">Sobre nosaltres</a>
+        <a href="#contacte">Contacte</a>
+    </nav>
+
+    <!-- Secció principal amb el formulari -->
+    <section>
+        <h2>Contacta amb nosaltres</h2>
+        <form>
+            <!-- Camp de text per al nom -->
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <!-- Camp de text per al correu electrònic -->
+            <label for="correu">Correu electrònic:</label>
+            <input type="email" id="correu" name="correu" required>
+
+            <!-- Menú desplegable per triar el motiu de la consulta -->
+            <label for="motiu">Motiu de la consulta:</label>
+            <select id="motiu" name="motiu" required>
+                <option value="consulta">Consulta</option>
+                <option value="feedback">Feedback</option>
+                <option value="altres">Altres</option>
+            </select>
+
+            <!-- Camp de text gran (textarea) per al missatge -->
+            <label for="missatge">Missatge:</label>
+            <textarea id="missatge" name="missatge" rows="4" cols="50" required></textarea>
+
+            <!-- Botó per enviar el formulari -->
+            <button type="submit">Envia</button>
+        </form>
+    </section>
+
+    <!-- Secció lateral (aside) amb informació addicional -->
+    <aside>
+        <h3>Articles relacionats</h3>
+        <ul>
+            <li><a href="#">5 consells per millorar la productivitat</a></li>
+            <li><a href="#">Com gestionar el temps eficientment</a></li>
+            <li><a href="#">Eines per treballar des de casa</a></li>
+        </ul>
+    </aside>
+
+</body>
+</html>
