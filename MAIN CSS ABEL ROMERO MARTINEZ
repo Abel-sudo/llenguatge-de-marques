@@ -1,21 +1,46 @@
-/* MAIN */
+main {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
 .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 30px auto;
-  padding: 20px;
-  background-color: var(--white);
+  padding: 30px;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px var(--box-shadow);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 90%;
 }
 
-.content content-flip {
+.content-flip {
   flex-direction: row-reverse;
 }
 
-/* Estils per a les fotos */
+.content-flip .intro_2,
+.content-flip .intro_2 h2,
+.content-flip .intro_2 p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.content-flip .intro_2 p {
+  margin-top: 15px;
+}
+
+.content .intro_3,
+.content .intro_3 h2,
+.content .intro_3 p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.content .intro_3 p {
+  margin-top: 15px;
+}
+
 .photo {
   flex: 1;
   display: flex;
@@ -25,7 +50,7 @@
 }
 
 .photo img {
-  max-width: 70%; 
+  max-width: 70%;
 }
 
 .photo_1, .photo_3 {
@@ -41,20 +66,24 @@
 }
 
 .photo_1, .photo_2, .photo_3 {
-  width: 600px; 
-  height: auto; 
+  width: 600px;
 }
 
 .intro {
   flex: 1;
   text-align: left;
+  margin-right: 20px;
+}
+
+.content .intro_2,
+.content .intro_3 {
+  margin-bottom: 15px;
 }
 
 .content:nth-of-type(2) {
   flex-direction: row-reverse;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header-bottom {
     flex-direction: column;
@@ -75,5 +104,6 @@
   .content {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 }
